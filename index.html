@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModalUser</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="btn show__btn" id="show__btn">Show User</button>
+
+      <!-- form modal -->
+
+      <div class="form__modal hidden" id="form__modal">
+        <!-- header  -->
+
+        <div class="header">
+          <button class="btn close__btn" id="close__btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal__user__body">
+          <form>
+            <div>
+              <label>
+                <span>Image:</span>
+                <input type="url" id="image" required />
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Fullname:</span>
+                <input type="text" id="name" />
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Tel Number:</span>
+                <input type="tel" id="tel" />
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Email:</span>
+                <input type="email" id="email" />
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Gender:</span>
+                <div class="gender-wrapper">
+                  <label>
+                    <span>Male</span>
+                    <input type="radio" name="gender" value="male" />
+                  </label>
+                  <label>
+                    <span>Female</span>
+                    <input type="radio" name="gender" value="female" />
+                  </label>
+                </div>
+              </label>
+            </div>
+            <button id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <ul id="users__list"></ul>
+
+    <!-- js -->
+    <script src="./app.js"></script>
+  </body>
+</html>
